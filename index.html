@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fenthorior</title>
+<meta name="description" content="Fenthorior is a small studio from Brazil. We make Capy Forest, a bubble shooter about two capybaras bringing a forest back to life.">
+<link rel="icon" href="/assets/capy-forest-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: one column, 44rem wide: the studio's name, one product card (art beside words, stacked on a phone), contact. */
+:root {
+  --paper: #f4f6f1;
+  --panel: #e6ece0;
+  --ink: #1d2a21;
+  --muted: #55655a;
+  --leaf: #2f6b3f;
+  --rule: #c9d3c3;
+  --display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #141a16;
+    --panel: #1e2821;
+    --ink: #e4ebe2;
+    --muted: #9fb0a3;
+    --leaf: #8fcf9d;
+    --rule: #33423a;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h1 { font-size: 2.75rem; font-weight: 700; }
+h2 { font-size: 1.3rem; font-weight: 600; color: var(--leaf); }
+h3 { font-size: 1.6rem; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--leaf); text-underline-offset: 0.15em; }
+a:focus-visible { outline: 2px solid var(--leaf); outline-offset: 2px; border-radius: 2px; }
+header, section { display: flex; flex-direction: column; gap: 0.75rem; }
+.lede { font-size: 1.2rem; color: var(--muted); max-width: 34rem; }
+.game {
+  background: var(--panel);
+  border-radius: 14px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+}
+.game .art {
+  background: #f3c98b url("/assets/capy-forest-dawn.jpg") center 62% / cover;
+  min-height: 19rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+}
+.game .art img { width: 100%; max-width: 13rem; height: auto; }
+.game .words { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.title { display: flex; align-items: center; gap: 0.75rem; }
+.title img { width: 3.25rem; height: 3.25rem; border-radius: 22%; }
+.meta { color: var(--muted); font-size: 0.95rem; }
+footer {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+@media (max-width: 36rem) {
+  h1 { font-size: 2.25rem; }
+  .game { grid-template-columns: 1fr; }
+  .game .art { min-height: 16rem; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Fenthorior</h1>
+  <p class="lede">A small studio from Brazil. We make games and tools, a few at a time, and finish them.</p>
+</header>
+
+<section aria-labelledby="games">
+  <h2 id="games">Our game</h2>
+  <div class="game">
+    <div class="art"><img src="/assets/capy-forest-logo.png" alt="Capy Forest" width="720" height="486"></div>
+    <div class="words">
+      <div class="title">
+        <img src="/assets/capy-forest-icon.png" alt="" width="384" height="384">
+        <h3>Capy Forest</h3>
+      </div>
+      <p>A bubble shooter about Castanha and Caju, two capybaras bringing the forests of Brazil back to life. Pop fruit across the Mata Atlântica, the Cerrado and the Pantanal, restore each sanctuary, and meet the animals and plants that come home.</p>
+      <p class="meta">For iPhone, iPad and Android. Coming soon to the App Store and Google Play.</p>
+      <p><a href="/capy-forest/privacy/">Privacy policy</a></p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="contact">
+  <h2 id="contact">Contact</h2>
+  <p>Questions, support and press: <a href="mailto:fenthorior@gmail.com">fenthorior@gmail.com</a></p>
+</section>
+
+<footer>
+  <p>© 2026 Fenthorior, Brazil</p>
+</footer>
+
+</main>
+</body>
+</html>
